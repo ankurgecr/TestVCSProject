@@ -63,7 +63,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void openSapnaTest() {
-
+        Intent intent=new Intent(MainActivity.this,SapnaMainActivity.class);
+        startActivity(intent);
     }
 
     private void openHimanshuTest() {

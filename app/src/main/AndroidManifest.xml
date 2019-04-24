@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="info.ankurpandya.testvcsproject">
+    
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
 
     <application
         android:allowBackup="true"
@@ -20,6 +24,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ActivityGovind"></activity>
+        <activity android:name=".SapnaMainActivity"></activity>
     </application>
 
 </manifest>
