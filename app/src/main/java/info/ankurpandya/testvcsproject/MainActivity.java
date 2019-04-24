@@ -5,9 +5,9 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
@@ -33,6 +33,39 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        btn_test_govind.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openGovindTest();
+            }
+        });
+
+        btn_test_sapna.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openSapnaTest();
+            }
+        });
+
+        btn_test_himanshu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openHimanshuTest();
+            }
+        });
+    }
+
+    private void openGovindTest() {
+
+    }
+
+    private void openSapnaTest() {
+
+    }
+
+    private void openHimanshuTest() {
+
     }
 
     @Override
