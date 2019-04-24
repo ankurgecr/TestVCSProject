@@ -1,6 +1,8 @@
 package info.ankurpandya.testvcsproject;
 
 import android.content.Intent;
+import android.hardware.fingerprint.FingerprintManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -10,6 +12,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -63,13 +66,27 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void openSapnaTest() {
-        Intent intent=new Intent(MainActivity.this,SapnaMainActivity.class);
+        Intent intent = new Intent(MainActivity.this, SapnaMainActivity.class);
         startActivity(intent);
     }
 
     private void openHimanshuTest() {
-        Intent in = new Intent(MainActivity.this,FingerPrintActHimanshu.class);
-        startActivity(in);
+        boolean shouldOpenFingerPrint = false;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            FingerprintManager fingerprintManager = (FingerprintManager) getSystemService(FINGERPRINT_SERVICE);
+            if (fingerprintManager.isHardwareDetected()) {
+                shouldOpenFingerPrint = true;
+            }
+        }
+
+        if (shouldOpenFingerPrint) {
+            Intent in = new Intent(MainActivity.this, FingerPrintActHimanshu.class);
+            startActivity(in);
+        } else {
+            Toast.makeText(this, "Your Device does not have a Fingerprint Sensor", Toast.LENGTH_SHORT).show();
+            Intent in = new Intent(MainActivity.this, MainActivityHimanshu.class);
+            startActivity(in);
+        }
     }
 
     @Override

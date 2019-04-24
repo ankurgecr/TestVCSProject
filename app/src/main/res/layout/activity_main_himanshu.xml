@@ -27,8 +27,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="18dp"
         android:text="Store Information"
-        android:textColor="@android:color/black"/>
-        <!--android:background="@drawable/my_button_bg_h"-->
+        android:textColor="@android:color/black"
+        android:background="@drawable/my_button_bg_h"/>
 
 
     <Button
@@ -39,8 +39,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="17dp"
         android:text="Show Information"
-        android:textColor="@android:color/black" />
-        <!--android:background="@drawable/my_button_bg_h"-->
+        android:textColor="@android:color/black"
+        android:background="@drawable/my_button_bg_h"/>
 
 
     <EditText
@@ -65,9 +65,8 @@
         android:padding="10dp"
         android:text="Save"
         android:textColor="@android:color/black"
+        android:background="@drawable/my_button_bg_h"
         />
-        <!--android:background="@drawable/my_button_bg_h"-->
-
 
     <Button
         android:id="@+id/btnReload"
@@ -75,12 +74,11 @@
         android:layout_height="wrap_content"
         android:layout_alignEnd="@+id/btnSave"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="-210dp"
-        android:layout_marginBottom="104dp"
+        android:layout_marginEnd="-155dp"
+        android:layout_marginBottom="101dp"
+        android:background="@drawable/my_button_bg_h"
         android:padding="10dp"
         android:text="Reload"
-        android:textColor="@android:color/black"/>
-
-    <!--android:background="@drawable/my_button_bg_h"-->
+        android:textColor="@android:color/black" />
 
 </RelativeLayout>
