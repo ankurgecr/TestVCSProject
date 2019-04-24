@@ -68,7 +68,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void openHimanshuTest() {
-
+        Intent in = new Intent(MainActivity.this,FingerPrintActHimanshu.class);
+        startActivity(in);
     }
 
     @Override
