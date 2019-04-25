@@ -14,9 +14,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import info.ankurpandya.testvcsproject.ankur.TestAnkurActivity;
+
 public class MainActivity extends AppCompatActivity {
 
-    Button btn_test_govind, btn_test_sapna, btn_test_himanshu;
+    Button btn_test_ankur, btn_test_govind, btn_test_sapna, btn_test_himanshu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        btn_test_ankur = findViewById(R.id.btn_test_ankur);
         btn_test_govind = findViewById(R.id.btn_test_govind);
         btn_test_sapna = findViewById(R.id.btn_test_sapna);
         btn_test_himanshu = findViewById(R.id.btn_test_himanshu);
@@ -35,6 +38,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Snackbar.make(view, "Hello Twist", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+            }
+        });
+
+        btn_test_ankur.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openAnkurTest();
             }
         });
 
@@ -58,6 +68,11 @@ public class MainActivity extends AppCompatActivity {
                 openHimanshuTest();
             }
         });
+    }
+
+    private void openAnkurTest() {
+        Intent intent = new Intent(MainActivity.this, TestAnkurActivity.class);
+        startActivity(intent);
     }
 
     private void openGovindTest() {

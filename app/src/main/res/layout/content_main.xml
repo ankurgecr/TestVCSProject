@@ -9,6 +9,16 @@
     tools:context=".MainActivity"
     tools:showIn="@layout/activity_main">
 
+    <info.ankurpandya.testvcsproject.TestFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_test_ankur"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Test Ankur Project" />
+
     <Button
         android:id="@+id/btn_test_govind"
         android:layout_width="match_parent"
