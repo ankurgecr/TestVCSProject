@@ -59,7 +59,7 @@ public class HimanshuProjectActivity extends AppCompatActivity {
     }
 
     private void openHimanshuProject2() {
-        Intent in=new Intent(HimanshuProjectActivity.this,Addition.class);
+        Intent in=new Intent(HimanshuProjectActivity.this,OrderActivity.class);
         startActivity(in);
     }
     }

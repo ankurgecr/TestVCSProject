@@ -32,8 +32,8 @@
         <activity android:name=".SapnaMainActivity" />
         <activity android:name=".sapna.SapnaProjectActivity"/>
         <activity android:name=".himanshu.HimanshuProjectActivity"/>
-        <activity android:name=".himanshu.Addition"/>
         <activity android:name=".sapna.SMainActivity"/>
+        <activity android:name=".himanshu.OrderActivity"/>
     </application>
 
 </manifest>
