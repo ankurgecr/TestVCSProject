@@ -13,24 +13,24 @@
         android:id="@+id/btn_test_ankur"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Test Ankur Project" />
+        android:text="@string/action_test_ankur_project" />
 
     <Button
         android:id="@+id/btn_test_govind"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Test Govind Project" />
+        android:text="@string/action_test_govind_project" />
 
     <Button
         android:id="@+id/btn_test_sapna"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Test Sapna Project" />
+        android:text="@string/action_test_sapna_project" />
 
     <Button
         android:id="@+id/btn_test_himanshu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Test Himanshu Project" />
+        android:text="@string/action_test_himanshu_project" />
 
 </LinearLayout>

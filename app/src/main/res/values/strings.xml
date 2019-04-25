@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">TestVCSProject</string>
     <string name="action_settings">Settings</string>
+    <string name="msg_invalid_value">Invalid value</string>
+    <string name="action_test_ankur_project">Test Ankur Project</string>
+    <string name="action_test_govind_project">Test Govind Project</string>
+    <string name="action_test_sapna_project">Test Sapna Project</string>
+    <string name="action_test_himanshu_project">Test Himanshu Project</string>
 </resources>

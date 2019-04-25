@@ -16,11 +16,11 @@ import android.widget.SeekBar;
 
 import info.ankurpandya.testvcsproject.R;
 
-public class EditableSlider extends FrameLayout {
+public class EditableSlider extends FrameLayout implements SeekBar.OnSeekBarChangeListener, TextWatcher {
 
-    View rootView;
-    SeekBar seekProgress;
-    EditText edtProgress;
+    private View rootView;
+    private SeekBar seekProgress;
+    private EditText edtProgress;
 
     public EditableSlider(@NonNull Context context) {
         super(context);
@@ -48,53 +48,49 @@ public class EditableSlider extends FrameLayout {
         rootView = inflater.inflate(R.layout.editable_slider, this, true);
         seekProgress = rootView.findViewById(R.id.seek_progress);
         edtProgress = rootView.findViewById(R.id.etd_progress);
+        seekProgress.setOnSeekBarChangeListener(this);
+        edtProgress.addTextChangedListener(this);
+        edtProgress.setText("0");
+    }
 
-        seekProgress.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int progress, boolean b) {
-                edtProgress.setText(String.valueOf(progress));
-            }
+    @Override
+    public void onProgressChanged(SeekBar seekBar, int progress, boolean b) {
+        edtProgress.setText(String.valueOf(progress));
+    }
 
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-
-            }
-        });
-
-
-        edtProgress.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                if (charSequence.length() > 0) {
-                    int progressInt = Integer.parseInt(charSequence.toString());
-                    edtProgress.setSelection(charSequence.length());
-                    if (progressInt != seekProgress.getProgress()) {
-                        if (progressInt <= seekProgress.getMax() && progressInt >= 0) {
-                            seekProgress.setProgress(progressInt);
-                        } else {
-                            edtProgress.setText("");
-                            edtProgress.setError("Invalid value");
-                        }
-                    }
+    @Override
+    public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+        if (charSequence.length() > 0) {
+            int progressInt = Integer.parseInt(charSequence.toString());
+            edtProgress.setSelection(charSequence.length());
+            if (progressInt != seekProgress.getProgress()) {
+                if (progressInt <= seekProgress.getMax() && progressInt >= 0) {
+                    seekProgress.setProgress(progressInt);
+                } else {
+                    edtProgress.setText("");
+                    edtProgress.setError(getContext().getString(R.string.msg_invalid_value));
                 }
             }
+        }
+    }
 
-            @Override
-            public void afterTextChanged(Editable editable) {
+    @Override
+    public void onStartTrackingTouch(SeekBar seekBar) {
+        //unused
+    }
 
-            }
-        });
+    @Override
+    public void onStopTrackingTouch(SeekBar seekBar) {
+        //unused
+    }
 
-        edtProgress.setText("0");
+    @Override
+    public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+        //unused
+    }
+
+    @Override
+    public void afterTextChanged(Editable editable) {
+        //unused
     }
 }
