@@ -31,6 +31,12 @@ public class HimanshuProjectActivity extends AppCompatActivity {
                 openHimanshuProject();
             }
         });
+        btn_pro_2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openHimanshuProject2();
+            }
+        });
     }
 
     private void openHimanshuProject() {
@@ -51,4 +57,9 @@ public class HimanshuProjectActivity extends AppCompatActivity {
             startActivity(in);
         }
     }
-}
+
+    private void openHimanshuProject2() {
+        Intent in=new Intent(HimanshuProjectActivity.this,Addition.class);
+        startActivity(in);
+    }
+    }
