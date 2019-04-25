@@ -22,12 +22,17 @@ public class SapnaProjectActivity extends AppCompatActivity {
         btnPro1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in = new Intent(SapnaProjectActivity.this, SapnaMainActivity.class);
-                startActivity(in);
+                Intent intent = new Intent(SapnaProjectActivity.this, SapnaMainActivity.class);
+                startActivity(intent);
 
             }
         });
-
-
+        btnPro2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(SapnaProjectActivity.this,SMainActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

@@ -5,10 +5,11 @@
     xmlns:tools="http://schemas.android.com/tools">
     
     <ImageView
+        android:id="@+id/siv"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:scaleType="centerCrop"
-        android:id="@+id/siv"
-        />
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="1dp" />
 
 </android.support.constraint.ConstraintLayout>
