@@ -30,6 +30,8 @@
         <activity android:name=".PrefActivityHimanshu" />
         <activity android:name=".ActivityGovind" />
         <activity android:name=".SapnaMainActivity" />
+        <activity android:name=".sapna.SapnaProjectActivity"/>
+        <activity android:name=".himanshu.HimanshuProjectActivity"/>
     </application>
 
 </manifest>

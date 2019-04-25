@@ -13,7 +13,7 @@ import android.widget.TextView;
 public class MainActivityHimanshu extends AppCompatActivity {
     TextView textView;
     Button btnSave, btnReload;
-    EditText etusername;
+    EditText etusername,etPassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +26,8 @@ public class MainActivityHimanshu extends AppCompatActivity {
         Button showinformation = (Button) findViewById(R.id.showinformation);
         textView = (TextView) findViewById(R.id.txtPrefs);
         etusername = (EditText) findViewById(R.id.input_username);
+        etPassword=(EditText)findViewById(R.id.etpassword);
+
 
         btnSave = (Button) findViewById(R.id.btnSave);
         btnReload = (Button) findViewById(R.id.btnReload);
@@ -53,7 +55,10 @@ public class MainActivityHimanshu extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String valueGivenByUser = etusername.getText().toString();
+                String valueGivenByUserone = etPassword.getText().toString();
+
                 DataHelper.saveString("username", valueGivenByUser);
+                DataHelper.saveString("password", valueGivenByUser);
             }
         });
 
@@ -61,7 +66,9 @@ public class MainActivityHimanshu extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String valueSavedInPref = DataHelper.getString("username");
+                String valueSavedInPrefone = DataHelper.getString("password");
                 etusername.setText(valueSavedInPref);
+                etPassword.setText(valueSavedInPref);
             }
         });
     }
