@@ -77,11 +77,14 @@ public class EditableSlider extends FrameLayout {
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
                 if (charSequence.length() > 0) {
                     int progressInt = Integer.parseInt(charSequence.toString());
-                    if (progressInt <= seekProgress.getMax() && progressInt >= 0) {
-                        seekProgress.setProgress(progressInt);
-                    } else {
-                        edtProgress.setText("");
-                        edtProgress.setError("Invalid value");
+                    edtProgress.setSelection(charSequence.length());
+                    if (progressInt != seekProgress.getProgress()) {
+                        if (progressInt <= seekProgress.getMax() && progressInt >= 0) {
+                            seekProgress.setProgress(progressInt);
+                        } else {
+                            edtProgress.setText("");
+                            edtProgress.setError("Invalid value");
+                        }
                     }
                 }
             }
@@ -91,5 +94,7 @@ public class EditableSlider extends FrameLayout {
 
             }
         });
+
+        edtProgress.setText("0");
     }
 }
