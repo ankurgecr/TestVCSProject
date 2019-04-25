@@ -33,6 +33,7 @@
         <activity android:name=".sapna.SapnaProjectActivity"/>
         <activity android:name=".himanshu.HimanshuProjectActivity"/>
         <activity android:name=".himanshu.Addition"/>
+        <activity android:name=".sapna.SMainActivity"/>
     </application>
 
 </manifest>
