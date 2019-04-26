@@ -1,8 +1,6 @@
 package info.ankurpandya.testvcsproject;
 
 import android.content.Intent;
-import android.hardware.fingerprint.FingerprintManager;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -12,9 +10,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 import info.ankurpandya.testvcsproject.ankur.TestAnkurActivity;
+import info.ankurpandya.testvcsproject.govind.LocationActivity;
 import info.ankurpandya.testvcsproject.himanshu.HimanshuProjectActivity;
 import info.ankurpandya.testvcsproject.sapna.SapnaProjectActivity;
 
@@ -78,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void openGovindTest() {
-        Intent intent = new Intent(MainActivity.this, ActivityGovind.class);
+        Intent intent = new Intent(MainActivity.this, LocationActivity.class);
         startActivity(intent);
     }
 
