@@ -19,11 +19,7 @@ import java.util.List;
  */
 public class SapnaImageGridAdapter extends RecyclerView.Adapter<SapnaImageGridAdapter.GridItemViewHolder> {
 
-    private List<String> imageList;
-
-    private Context c;
-    private String path;
-    Bitmap bitmap = BitmapFactory.decodeFile(path);
+    private List<Bitmap> imageList;
 
     public class GridItemViewHolder extends RecyclerView.ViewHolder {
         ImageView siv;
@@ -34,8 +30,7 @@ public class SapnaImageGridAdapter extends RecyclerView.Adapter<SapnaImageGridAd
         }
     }
 
-    public SapnaImageGridAdapter(Context c, List imageList) {
-        this.c = c;
+    public SapnaImageGridAdapter(List<Bitmap> imageList) {
         this.imageList = imageList;
     }
 
@@ -47,12 +42,8 @@ public class SapnaImageGridAdapter extends RecyclerView.Adapter<SapnaImageGridAd
 
     @Override
     public void onBindViewHolder(GridItemViewHolder holder, int position) {
-        final String path = imageList.get(position);
-        File imgFile = new File(path);
-        if (imgFile.exists()) {
-            Bitmap myBitmap = BitmapFactory.decodeFile(imgFile.getAbsolutePath());
-            holder.siv.setImageBitmap(myBitmap);
-        }
+        Bitmap bitmap = imageList.get(position);
+        holder.siv.setImageBitmap(bitmap);
     }
 
     @Override

@@ -6,4 +6,5 @@
     <string name="action_test_govind_project">Test Govind Project</string>
     <string name="action_test_sapna_project">Test Sapna Project</string>
     <string name="action_test_himanshu_project">Test Himanshu Project</string>
+    <string name="msg_accept_permission">You need to give permissions to make this project work.</string>
 </resources>

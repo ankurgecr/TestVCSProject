@@ -3,6 +3,7 @@
     package="info.ankurpandya.testvcsproject">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.USE_FINGERPRINT" />
@@ -30,10 +31,10 @@
         <activity android:name=".FingerPrintActHimanshu" />
         <activity android:name=".PrefActivityHimanshu" />
         <activity android:name=".ActivityGovind" />
-        <activity android:name=".SapnaMainActivity" />
         <activity android:name=".sapna.SapnaProjectActivity"/>
         <activity android:name=".himanshu.HimanshuProjectActivity"/>
         <activity android:name=".sapna.SMainActivity"/>
+        <activity android:name=".sapna.ImagePickerActivity"/>
         <activity android:name=".himanshu.OrderActivity"/>
         <activity android:name=".himanshu.Location_himanshu.LocationMainActivity"/>
     </application>

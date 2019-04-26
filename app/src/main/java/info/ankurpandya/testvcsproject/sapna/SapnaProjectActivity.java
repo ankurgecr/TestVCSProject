@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.Button;
 
 import info.ankurpandya.testvcsproject.R;
-import info.ankurpandya.testvcsproject.SapnaMainActivity;
 
 public class SapnaProjectActivity extends AppCompatActivity {
 
@@ -22,7 +21,7 @@ public class SapnaProjectActivity extends AppCompatActivity {
         btnPro1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SapnaProjectActivity.this, SapnaMainActivity.class);
+                Intent intent = new Intent(SapnaProjectActivity.this, ImagePickerActivity.class);
                 startActivity(intent);
 
             }
