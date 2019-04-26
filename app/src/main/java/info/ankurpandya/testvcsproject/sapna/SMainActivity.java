@@ -19,8 +19,8 @@ public class SMainActivity extends AppCompatActivity {
         txtKeyValue2 = findViewById(R.id.txt_keyvalue_2);
         txtKeyValue3 = findViewById(R.id.txt_keyvalue_3);
 
-        txtKeyValue1.setText("My Name", "Sapna");
-        txtKeyValue2.setText("Your Name", "Ankur");
-        txtKeyValue3.setText("Company Name", "Twist Mobile");
+        txtKeyValue1.setText("Name", "Sapna");
+        txtKeyValue2.setText("Id", "2403@yadav");
+        txtKeyValue3.setText("Contact No.", "1234567890");
     }
 }
