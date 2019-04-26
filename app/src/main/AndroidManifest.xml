@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 
     <application
         android:allowBackup="true"
@@ -34,6 +35,7 @@
         <activity android:name=".himanshu.HimanshuProjectActivity"/>
         <activity android:name=".sapna.SMainActivity"/>
         <activity android:name=".himanshu.OrderActivity"/>
+        <activity android:name=".himanshu.Location_himanshu.LocationMainActivity"/>
     </application>
 
 </manifest>

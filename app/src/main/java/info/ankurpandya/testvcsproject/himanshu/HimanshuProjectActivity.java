@@ -14,9 +14,10 @@ import info.ankurpandya.testvcsproject.FingerPrintActHimanshu;
 import info.ankurpandya.testvcsproject.MainActivity;
 import info.ankurpandya.testvcsproject.MainActivityHimanshu;
 import info.ankurpandya.testvcsproject.R;
+import info.ankurpandya.testvcsproject.himanshu.Location_himanshu.LocationMainActivity;
 
 public class HimanshuProjectActivity extends AppCompatActivity {
-    Button btn_pro_1, btn_pro_2;
+    Button btn_pro_1, btn_pro_2,btn_pro_3;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -24,6 +25,7 @@ public class HimanshuProjectActivity extends AppCompatActivity {
         setContentView(R.layout.himanshu_project_list);
         btn_pro_1 = (Button) findViewById(R.id.btn_pro_h1);
         btn_pro_2 = (Button) findViewById(R.id.btn_pro_h2);
+        btn_pro_3 = (Button) findViewById(R.id.btn_pro_h3);
 
         btn_pro_1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,6 +37,12 @@ public class HimanshuProjectActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 openHimanshuProject2();
+            }
+        });
+        btn_pro_3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openHimanshuProject3();
             }
         });
     }
@@ -62,4 +70,10 @@ public class HimanshuProjectActivity extends AppCompatActivity {
         Intent in=new Intent(HimanshuProjectActivity.this,OrderActivity.class);
         startActivity(in);
     }
+
+    private void openHimanshuProject3() {
+        Intent in=new Intent(HimanshuProjectActivity.this, LocationMainActivity.class);
+        startActivity(in);
+    }
+
     }
