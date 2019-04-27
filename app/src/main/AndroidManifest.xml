@@ -31,7 +31,9 @@
         <activity android:name=".FingerPrintActHimanshu" />
         <activity android:name=".PrefActivityHimanshu" />
         <activity android:name=".ActivityGovind" />
-        <activity android:name=".SapnaMainActivity" />
+        <activity android:name=".sapna.ImagePickerActivity"/>
+        <activity android:name=".sapna.SapnaGame.GameActivity"/>
+
         <activity android:name=".sapna.SapnaProjectActivity"/>
         <activity android:name=".himanshu.HimanshuProjectActivity"/>
         <activity android:name=".sapna.SMainActivity"/>
