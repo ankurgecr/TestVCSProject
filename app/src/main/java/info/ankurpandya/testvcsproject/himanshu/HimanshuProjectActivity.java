@@ -4,14 +4,13 @@ import android.content.Intent;
 import android.hardware.fingerprint.FingerprintManager;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
 import info.ankurpandya.testvcsproject.FingerPrintActHimanshu;
-import info.ankurpandya.testvcsproject.MainActivity;
 import info.ankurpandya.testvcsproject.MainActivityHimanshu;
 import info.ankurpandya.testvcsproject.R;
 import info.ankurpandya.testvcsproject.himanshu.Location_himanshu.LocationMainActivity;
